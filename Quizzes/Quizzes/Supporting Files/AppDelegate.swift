@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let tabvc = UITabBarController()
+    let nav = UINavigationController(rootViewController: tabvc)
+    let quizvc = QuizzesViewController()
+    let searchquizvc = SearchQuizzesViewController()
+    let createquizvc = CreateQuizViewController()
+    let profilevc = ProfileViewController()
+    
+    
+    
+    
+    
+    
+    
+    
     return true
   }
 

@@ -23,14 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let searchquizvc = SearchQuizzesViewController()
     let createquizvc = CreateQuizViewController()
     let profilevc = ProfileViewController()
-    
-    
-    
-    
-    
-    
-    
-    
+    tabvc.viewControllers = [quizvc, searchquizvc, createquizvc, profilevc]
+    tabvc.tabBar.items?[0].image = UIImage(named: "quiz-icon")
+    tabvc.tabBar.items?[1].image = UIImage(named: "search-icon")
+    tabvc.tabBar.items?[2].image = UIImage(named: "create-icon")
+    tabvc.tabBar.items?[3].image = UIImage(named: "profile-unfilled")
+    quizvc.title = "Quizzes"
+    searchquizvc.title = "Search"
+    createquizvc.title = "Create"
+    profilevc.title = "Profile"
+
+    window = UIWindow(frame: UIScreen.main.bounds) // window, take up the screen size
+    window?.rootViewController = tabvc
+    window?.makeKeyAndVisible()
+
     return true
   }
 

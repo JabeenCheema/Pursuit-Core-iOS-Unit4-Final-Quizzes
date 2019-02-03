@@ -14,7 +14,8 @@ class QuizCell: UICollectionViewCell {
         let quizLabel = UILabel()
         quizLabel.textAlignment = .center
         quizLabel.numberOfLines = 2
-        quizLabel.backgroundColor = .red
+//        quizLabel.backgroundColor = 
+        quizLabel.text = "Quiz Label"
         return quizLabel
     }()
 

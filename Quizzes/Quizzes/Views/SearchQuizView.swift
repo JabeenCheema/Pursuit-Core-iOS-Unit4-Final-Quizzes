@@ -37,13 +37,15 @@ class SearchQuizView: UIView {
     func setupSearchCollectionView() {
         addSubview(searchcollectionview)
         searchcollectionview.translatesAutoresizingMaskIntoConstraints = false
-       searchcollectionview.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-
-        searchcollectionview.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
+//       searchcollectionview.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+//
+//        searchcollectionview.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
         searchcollectionview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-        searchcollectionview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
-        searchcollectionview.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        searchcollectionview.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true 
+        searchcollectionview.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor).isActive = true
+        searchcollectionview.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor).isActive = true
+//        searchcollectionview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+//        searchcollectionview.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+//        searchcollectionview.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
     }
     

@@ -17,6 +17,9 @@
 		45FB2FAD2204E3A000BD05FF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FAC2204E3A000BD05FF /* ProfileView.swift */; };
 		45FB2FB02206764D00BD05FF /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FAF2206764D00BD05FF /* QuizCell.swift */; };
 		45FB2FB22206A0CF00BD05FF /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FB12206A0CF00BD05FF /* SearchCell.swift */; };
+		45FB2FB52206BBCD00BD05FF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FB42206BBCD00BD05FF /* APIClient.swift */; };
+		45FB2FB72206BC2F00BD05FF /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FB62206BC2F00BD05FF /* QuizModel.swift */; };
+		45FB2FB92206BCD700BD05FF /* UserQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FB82206BCD700BD05FF /* UserQuizModel.swift */; };
 		577118C12203796A00B9DD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577118C02203796A00B9DD0B /* AppDelegate.swift */; };
 		577118C82203796B00B9DD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577118C72203796B00B9DD0B /* Assets.xcassets */; };
 		577118CB2203796B00B9DD0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577118C92203796B00B9DD0B /* LaunchScreen.storyboard */; };
@@ -38,6 +41,9 @@
 		45FB2FAC2204E3A000BD05FF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		45FB2FAF2206764D00BD05FF /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		45FB2FB12206A0CF00BD05FF /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		45FB2FB42206BBCD00BD05FF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		45FB2FB62206BC2F00BD05FF /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		45FB2FB82206BCD700BD05FF /* UserQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuizModel.swift; sourceTree = "<group>"; };
 		577118BD2203796A00B9DD0B /* Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577118C02203796A00B9DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577118C72203796B00B9DD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		45FB2FBA2206BDFF00BD05FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45FB2FB62206BC2F00BD05FF /* QuizModel.swift */,
+				45FB2FB82206BCD700BD05FF /* UserQuizModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		577118B42203796A00B9DD0B = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +126,7 @@
 		577118BF2203796A00B9DD0B /* Quizzes */ = {
 			isa = PBXGroup;
 			children = (
+				45FB2FBA2206BDFF00BD05FF /* Models */,
 				45FB2FAE2204E3AA00BD05FF /* Views */,
 				45FB2FA52204C34E00BD05FF /* Controllers */,
 				45FB2FB32206A0ED00BD05FF /* Cells */,
@@ -136,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				577118C02203796A00B9DD0B /* AppDelegate.swift */,
+				45FB2FB42206BBCD00BD05FF /* APIClient.swift */,
 				577118C72203796B00B9DD0B /* Assets.xcassets */,
 				577118C92203796B00B9DD0B /* LaunchScreen.storyboard */,
 			);
@@ -230,8 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FB2F9E2204C2CD00BD05FF /* QuizzesViewController.swift in Sources */,
+				45FB2FB92206BCD700BD05FF /* UserQuizModel.swift in Sources */,
+				45FB2FB52206BBCD00BD05FF /* APIClient.swift in Sources */,
 				45FB2FB22206A0CF00BD05FF /* SearchCell.swift in Sources */,
 				577118D722037ABA00B9DD0B /* NetworkHelper.swift in Sources */,
+				45FB2FB72206BC2F00BD05FF /* QuizModel.swift in Sources */,
 				45FB2FA42204C34200BD05FF /* ProfileViewController.swift in Sources */,
 				45FB2FB02206764D00BD05FF /* QuizCell.swift in Sources */,
 				45FB2FA72204E36300BD05FF /* QuizzesView.swift in Sources */,

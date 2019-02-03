@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let tabvc = UITabBarController()
     let nav = UINavigationController(rootViewController: tabvc)
+    let createquizvc = CreateQuizViewController()
     let quizvc = QuizzesViewController()
     let searchquizvc = SearchQuizzesViewController()
-    let createquizvc = CreateQuizViewController()
     let profilevc = ProfileViewController()
     tabvc.viewControllers = [quizvc, searchquizvc, createquizvc, profilevc]
     tabvc.tabBar.items?[0].image = UIImage(named: "quiz-icon")

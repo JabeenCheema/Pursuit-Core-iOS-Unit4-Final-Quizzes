@@ -10,9 +10,13 @@ import UIKit
 
 class CreateQuizViewController: UIViewController {
 
+    var createquiz = CreateQuizView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .yellow
+        self.view.addSubview(createquiz)
 
         
     }

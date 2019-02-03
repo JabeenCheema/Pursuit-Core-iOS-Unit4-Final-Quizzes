@@ -62,7 +62,6 @@
 		45FB2FA52204C34E00BD05FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				45FB2FAF2206764D00BD05FF /* QuizCell.swift */,
 				45FB2F9D2204C2CD00BD05FF /* QuizzesViewController.swift */,
 				45FB2F9F2204C31400BD05FF /* SearchQuizzesViewController.swift */,
 				45FB2FA12204C33100BD05FF /* CreateQuizViewController.swift */,
@@ -74,6 +73,7 @@
 		45FB2FAE2204E3AA00BD05FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45FB2FAF2206764D00BD05FF /* QuizCell.swift */,
 				45FB2FA62204E36300BD05FF /* QuizzesView.swift */,
 				45FB2FA82204E37E00BD05FF /* SearchQuizView.swift */,
 				45FB2FAA2204E38E00BD05FF /* CreateQuizView.swift */,

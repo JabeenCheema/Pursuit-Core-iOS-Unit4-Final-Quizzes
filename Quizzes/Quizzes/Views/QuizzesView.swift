@@ -25,7 +25,6 @@ class QuizzesView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        quizcollectionview.register(QuizCell.self, forCellWithReuseIdentifier: "QuizCell")
         setupCollectionView()
     }
     

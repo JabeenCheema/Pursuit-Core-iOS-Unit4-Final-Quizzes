@@ -40,9 +40,9 @@ class QuizCell: UICollectionViewCell {
         quizLabel.translatesAutoresizingMaskIntoConstraints = false
         quizLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         quizLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-//        quizLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
-//        quizLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
-//        quizLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        quizLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
+        quizLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
+        quizLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
 
     private func setUpOptionsButton() {

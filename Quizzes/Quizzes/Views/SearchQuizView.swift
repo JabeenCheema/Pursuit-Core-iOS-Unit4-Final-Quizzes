@@ -12,7 +12,7 @@ class SearchQuizView: UIView {
 
     lazy var searchcollectionview: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 175, height: 175)
+        layout.itemSize = CGSize(width: 400, height: 400) // cell size
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 11, left: 11, bottom: 11, right: 11)
         

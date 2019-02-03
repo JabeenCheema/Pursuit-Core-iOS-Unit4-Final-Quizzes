@@ -10,12 +10,43 @@ import UIKit
 
 class SearchQuizView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var searchcollectionview: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 175, height: 175)
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 11, left: 11, bottom: 11, right: 11)
+        
+        let cv = UICollectionView(frame: frame, collectionViewLayout: layout)
+        cv.backgroundColor = .blue
+        
+        
+        return cv
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        setupSearchCollectionView()
+        self.backgroundColor = .green           // this is the color of the view 
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
+    
+    func setupSearchCollectionView() {
+        addSubview(searchcollectionview)
+        searchcollectionview.translatesAutoresizingMaskIntoConstraints = false
+       searchcollectionview.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+
+        searchcollectionview.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
+        searchcollectionview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        searchcollectionview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        searchcollectionview.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        searchcollectionview.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true 
+        
+    }
+    
+    
 
 }

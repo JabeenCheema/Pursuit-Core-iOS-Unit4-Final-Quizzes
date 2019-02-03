@@ -10,12 +10,40 @@ import UIKit
 
 class QuizzesView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var quizcollectionview: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 175, height: 175)
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 11, left: 11, bottom: 11, right: 11)
+        
+        let cv = UICollectionView(frame: frame, collectionViewLayout: layout)
+        cv.backgroundColor = .blue
+        
+        
+        return cv
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        quizcollectionview.register(QuizCell.self, forCellWithReuseIdentifier: "QuizCell")
+        setupCollectionView()
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
+    
+    func setupCollectionView() {
+        addSubview(quizcollectionview)
+        quizcollectionview.translatesAutoresizingMaskIntoConstraints = false
+        quizcollectionview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70).isActive = true
+        quizcollectionview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
+        quizcollectionview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+        quizcollectionview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true 
+        
+    }
+
+
 
 }

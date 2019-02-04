@@ -12,6 +12,13 @@ class QuizzesViewController: UIViewController {
 
     var quizzesview = QuizzesView()
     
+    var userquiz = [UserQuiz]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.quizzesview.quizcollectionview.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +37,7 @@ class QuizzesViewController: UIViewController {
 extension QuizzesViewController: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return userquiz.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

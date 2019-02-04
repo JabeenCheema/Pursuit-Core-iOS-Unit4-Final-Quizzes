@@ -1,5 +1,5 @@
 //
-//  UserQuizModel.swift
+//  UserDefaultKeys.swift
 //  Quizzes
 //
 //  Created by Jabeen's MacBook on 2/3/19.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct UserQuizModel: Codable {
-    let id: String
-    let quizTitle: String
-    let facts: [String]
+struct UserDefaultKeys {
+    static let DefaultSearchKey = "Default Search"
 }

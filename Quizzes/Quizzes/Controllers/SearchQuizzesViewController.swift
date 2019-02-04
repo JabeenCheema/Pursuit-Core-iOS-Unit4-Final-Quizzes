@@ -24,7 +24,7 @@ class SearchQuizzesViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .purple
         self.view.addSubview(searchquizview)
-        navigationItem.title = "thing"
+        navigationItem.title = "Search Quizzes Online"
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "somthing", style: .plain, target: self, action: #selector(somthingelse))
         searchquizview.searchcollectionview.register(SearchCell.self, forCellWithReuseIdentifier: "SearchCell")
         searchquizview.searchcollectionview.dataSource = self

@@ -22,7 +22,7 @@ class QuizzesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = #colorLiteral(red: 0.681110013, green: 0.874832622, blue: 0.9764705896, alpha: 1)
+        self.view.backgroundColor = .white
         self.view.addSubview(quizzesview)
         quizzesview.quizcollectionview.register(QuizCell.self, forCellWithReuseIdentifier: "QuizCell")
         quizzesview.quizcollectionview.delegate = self
@@ -43,11 +43,31 @@ extension QuizzesViewController: UICollectionViewDataSource,UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = quizzesview.quizcollectionview.dequeueReusableCell(withReuseIdentifier: "QuizCell", for: indexPath) as? QuizCell else { return UICollectionViewCell() }
         cell.backgroundColor = .gray
+//        cell.optionsButton.addTarget(self, action: #selector(optionsButtonPressed), for: .touchUpInside)
         return cell
     }
     
+//    @objc func optionsButtonPressed(optionsbutton: UIButton) {
+//
+////        let index = optionsbutton.tag
+//
+//        let actionsheet = UIAlertController(title: "Delete", message: "Options", preferredStyle: .actionSheet)
+//
+//        let delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive) { (delete) in
+//            <#code#> // I need to work on the data persistence part to do this
+//        }
+    
+//    let cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (cancel) in
+//
+//    }
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        
         let detailvc = QuizDetailViewController()
         
         navigationController?.pushViewController(detailvc, animated: true)

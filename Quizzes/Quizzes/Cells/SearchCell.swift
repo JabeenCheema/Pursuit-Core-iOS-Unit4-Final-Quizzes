@@ -8,8 +8,18 @@
 
 import UIKit
 
+protocol AddButtonDelegate: AnyObject {
+    func addQuizButton()
+}
+
 class SearchCell: UICollectionViewCell {
     
+    var delegate: AddButtonDelegate?  // what is this var and why do i need the question mark
+    
+//    public lazy var searchBar: UISearchBar = {
+//        let searchBar = UISearchBar()
+//        searchBar
+//    }()
     public lazy var searchLabel: UILabel = {
         let searchLabel = UILabel()
         searchLabel.textAlignment = .center
@@ -20,11 +30,18 @@ class SearchCell: UICollectionViewCell {
     public lazy var addButton: UIButton = {
         let addButton = UIButton()
         addButton.setImage(UIImage(named: "add-icon-filled"), for: .normal)
+        addButton.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         return addButton
     }()
 
+    @objc func addButtonPressed() {
+        delegate?.addQuizButton() // why do i need to do delegate and why a question mark 
+    }
+    
+    
+    
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: UIScreen.main.bounds)
         backgroundColor = #colorLiteral(red: 1, green: 0.9045387371, blue: 0.932782029, alpha: 1)
         setUpAddButton()
     }

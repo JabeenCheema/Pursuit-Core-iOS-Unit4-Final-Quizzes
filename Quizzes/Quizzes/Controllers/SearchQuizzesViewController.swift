@@ -48,10 +48,6 @@ class SearchQuizzesViewController: UIViewController {
             }
         }
     }
-
-
-
-
 }
 
 extension SearchQuizzesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -63,8 +59,9 @@ extension SearchQuizzesViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = searchquizview.searchcollectionview.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCell else { return UICollectionViewCell() }
         let cellinfo = searchQuiz[indexPath.row]
-        //cell.backgroundColor = .gray
+        cell.backgroundColor = .gray
         cell.searchLabel.text = cellinfo.quizTitle
+        
         return cell
     }
     

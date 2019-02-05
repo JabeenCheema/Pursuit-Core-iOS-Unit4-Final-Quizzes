@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458AA6FE2208B2840001C4EC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AA6FD2208B2840001C4EC /* Item.swift */; };
+		458AA7002208B3ED0001C4EC /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AA6FF2208B3ED0001C4EC /* ItemModel.swift */; };
 		45FB2F9E2204C2CD00BD05FF /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2F9D2204C2CD00BD05FF /* QuizzesViewController.swift */; };
 		45FB2FA02204C31400BD05FF /* SearchQuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2F9F2204C31400BD05FF /* SearchQuizzesViewController.swift */; };
 		45FB2FA22204C33100BD05FF /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB2FA12204C33100BD05FF /* CreateQuizViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		458AA6FD2208B2840001C4EC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		458AA6FF2208B3ED0001C4EC /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		45FB2F9D2204C2CD00BD05FF /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
 		45FB2F9F2204C31400BD05FF /* SearchQuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuizzesViewController.swift; sourceTree = "<group>"; };
 		45FB2FA12204C33100BD05FF /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				45FB2FB62206BC2F00BD05FF /* QuizModel.swift */,
 				45FB2FB82206BCD700BD05FF /* UserQuiz.swift */,
+				458AA6FF2208B3ED0001C4EC /* ItemModel.swift */,
 				45FB2FC12207D54E00BD05FF /* UserDefaultKeys.swift */,
 			);
 			path = Models;
@@ -174,6 +179,7 @@
 		577118D822037B4000B9DD0B /* File Manager Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				458AA6FD2208B2840001C4EC /* Item.swift */,
 				577118D922037B5B00B9DD0B /* DataPersistenceManager.swift */,
 			);
 			path = "File Manager Helpers";
@@ -262,11 +268,13 @@
 				45FB2FB92206BCD700BD05FF /* UserQuiz.swift in Sources */,
 				45FB2FBE2206CA0500BD05FF /* QuizDetailCell.swift in Sources */,
 				45FB2FB52206BBCD00BD05FF /* APIClient.swift in Sources */,
+				458AA6FE2208B2840001C4EC /* Item.swift in Sources */,
 				45FB2FB22206A0CF00BD05FF /* SearchCell.swift in Sources */,
 				577118D722037ABA00B9DD0B /* NetworkHelper.swift in Sources */,
 				45FB2FC02206CB4100BD05FF /* QuizDetailViewController.swift in Sources */,
 				45FB2FB72206BC2F00BD05FF /* QuizModel.swift in Sources */,
 				45FB2FA42204C34200BD05FF /* ProfileViewController.swift in Sources */,
+				458AA7002208B3ED0001C4EC /* ItemModel.swift in Sources */,
 				45FB2FB02206764D00BD05FF /* QuizCell.swift in Sources */,
 				45FB2FA72204E36300BD05FF /* QuizzesView.swift in Sources */,
 				577118C12203796A00B9DD0B /* AppDelegate.swift in Sources */,

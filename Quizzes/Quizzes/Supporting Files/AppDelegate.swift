@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let tabvc = UITabBarController()
     let nav = UINavigationController(rootViewController: tabvc)
-    let createquizvc = CreateQuizViewController()
+    let createquizvc = UINavigationController(rootViewController: CreateQuizViewController())
+    
     let quizvc = QuizzesViewController()
     let searchquizvc = SearchQuizzesViewController()
     let profilevc = ProfileViewController()

@@ -10,11 +10,10 @@ import UIKit
 
 class ProfileView: UIView {
 
-    lazy var editPhotoLabel: UILabel = {
-        let editPhotoLabel = UILabel()
-        editPhotoLabel.text = "Edit Photo"
-        editPhotoLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8602354673, blue: 0.8851751726, alpha: 1)
-        return editPhotoLabel
+    lazy var editNameLabel: UIButton = {
+        let editNameLabel = UIButton()
+        editNameLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8602354673, blue: 0.8851751726, alpha: 1)
+        return editNameLabel
     }()
     
     lazy var view: UIView = {
@@ -30,10 +29,11 @@ class ProfileView: UIView {
         return profileButton
     }()
 
-    lazy var usernameLabel: UILabel = {
-        let usernameLabel = UILabel()
-        usernameLabel.text = "username"
-        return usernameLabel
+    lazy var usernameButton: UIButton = {
+        let usernameButton = UIButton()
+        usernameButton.setTitle("", for: .normal)
+        usernameButton.backgroundColor = .red
+        return usernameButton
         }()
 
     override init(frame: CGRect) {
@@ -45,7 +45,7 @@ class ProfileView: UIView {
         setEditPhotoLabel()
         setViewConstraints()
         setProfileButtonConstraints()
-        setusernameLabel()
+        setusernameButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,18 +53,18 @@ class ProfileView: UIView {
     }
     
     private func setEditPhotoLabel() {
-        addSubview(editPhotoLabel)
-        editPhotoLabel.translatesAutoresizingMaskIntoConstraints = false
-        editPhotoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 120).isActive = true
-        editPhotoLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
-        editPhotoLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        editPhotoLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+        addSubview(editNameLabel)
+        editNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        editNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 120).isActive = true
+        editNameLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        editNameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        editNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
         //editPhotoLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
     }
     private func setViewConstraints() {
          addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.topAnchor.constraint(equalTo: editPhotoLabel.bottomAnchor, constant: 30).isActive = true
+        view.topAnchor.constraint(equalTo: editNameLabel.bottomAnchor, constant: 30).isActive = true
         view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
         view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
         view.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.50).isActive = true
@@ -81,13 +81,13 @@ class ProfileView: UIView {
       
     }
 
-    private func setusernameLabel() {
-         addSubview(usernameLabel)
-        usernameLabel.translatesAutoresizingMaskIntoConstraints = false
-        usernameLabel.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 30).isActive = true
-        usernameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
-        usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11)
-        usernameLabel.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 20)
+    private func setusernameButton() {
+         addSubview(usernameButton)
+        usernameButton.translatesAutoresizingMaskIntoConstraints = false
+        usernameButton.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 80).isActive = true
+        usernameButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+        usernameButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        usernameButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 20)
         
        
         

@@ -65,7 +65,7 @@ class ProfileViewController: UIViewController {
                 else {
                     return
             }
-            self.profileView.usernameLabel.text = userName
+            self.profileView.usernameButton.setTitle( userName, for: .normal)
             
             UserDefaults.standard.set(userName, forKey: UserDefaultKeys.DefaultSearchKey)
         }
@@ -79,9 +79,11 @@ class ProfileViewController: UIViewController {
             
             
             self.profileView.profileButton.addTarget(self, action: #selector(setImageAlert), for: .touchUpInside)
-            self.profileView.usernameLabel.text = defaultUsername
+            self.profileView.usernameButton.setTitle(defaultUsername, for: .normal)
            
         } else {
+            self.profileView.usernameButton.setTitle("defaultUsername", for: .normal)
+
             print("User Deafult not working")
         }
     }

@@ -46,8 +46,8 @@ class CreateQuizView: UIView {
     func setUptextfield() {
         addSubview(quiztextfield)
         quiztextfield.translatesAutoresizingMaskIntoConstraints = false
-        quiztextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant:80).isActive = true
-        quiztextfield.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        quiztextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
+        quiztextfield.leadingAnchor.constraint (equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
         quiztextfield.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
         quiztextfield.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }

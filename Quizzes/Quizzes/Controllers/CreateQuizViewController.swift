@@ -17,11 +17,29 @@ class CreateQuizViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .yellow
         self.view.addSubview(createquiz)
+        navigationItem.title = "Create Quiz"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(createBarButton))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelCreate))
+//createquiz.quiztextfield.delegate = self
+//        createquiz.textviewone
+    }
+    
+    @objc func createBarButton(){
+        Item.init(title: "quiz text field", firsttextDescription: "first description", secondtextDescription: "second description", createdAt: "")
 
+       }
+   
+    @objc func cancelCreate() {
+        createquiz.quiztextfield.text = ""
+        createquiz.textviewone.text = ""
+        createquiz.textviewtwo.text = "" 
         
     }
     
-
     
+    
+}
 
+extension CreateQuizViewController: UITextFieldDelegate, UITextViewDelegate {
+    
 }
